@@ -8,9 +8,11 @@ const Crypto = () => {
   //2 - función para traer los datos
   const endpoint = 'https://api.coingecko.com/api/v3/coins' 
   const showData = () => {
+   
     axios.get(endpoint).then( (res) => {
         //console.log(res.data)
         setCryptos(res.data)
+        console.log(cryptos)
     })
   }
   //useEffect
